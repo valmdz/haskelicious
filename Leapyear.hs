@@ -1,7 +1,7 @@
 -- Taken from [1]
 --
 -- [1]: https://www.vacationlabs.com/haskell/basic-types-and-functions.html#leap-year
-module Leapyear ( main ) where
+module Main ( main ) where
 
 import Prelude hiding ( id )
 -- This is a comment
