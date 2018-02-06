@@ -1,3 +1,6 @@
+-- Taken from [1]
+--
+-- [1]: https://www.vacationlabs.com/haskell/basic-types-and-functions.html#leap-year
 module Leapyear ( main ) where
 
 import Prelude hiding ( id )
