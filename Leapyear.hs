@@ -1,4 +1,4 @@
--- Taken from [1]
+-- | Taken from [1]
 --
 -- [1]: https://www.vacationlabs.com/haskell/basic-types-and-functions.html#leap-year
 module Main ( main ) where
@@ -43,8 +43,10 @@ isLeapYear yr
   | otherwise = False
 
 
--- Reads a year from user, checks if that is a leap-year.
+-- | Reads a year from user, checks if that is a leap-year.
 main :: IO ()
 main = do
-  n <- read <$> getLine
-  print $ isLeapYear n
+  ns <- map read . lines <$> getContents
+  mapM_ (\ yr -> print' yr . isLeapYear $ yr) ns
+    where
+      print' y b = putStrLn $ "isLeapYear " ++ show y ++ " = " ++ show b
