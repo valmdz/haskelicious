@@ -29,8 +29,9 @@ exampleInput = 'o':'c':'i':'r':'e':'d':'e':'f':[]
 --     "ociredef"
 
 main :: IO ()
-main =
-  print . reverse $ exampleInput
+main = do
+  xs <- getLine
+  putStrLn . reverse $ xs
 
 -- reverse [1,2,3,3]
 
